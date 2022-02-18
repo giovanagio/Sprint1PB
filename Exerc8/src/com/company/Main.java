@@ -18,7 +18,7 @@ public class Main {
         for (int i = 0; i < numFuncionarios; i++) {
 
             FuncionariosEmpresa funcionariosEmpresa = new FuncionariosEmpresa();
-            System.out.println("Digite o nome do funcionário");
+            System.out.println("Por favor, digite o nome do funcionário");
             funcionariosEmpresa.setName(sc.next());
             System.out.println("Digite o salário respectivo do funcionário");
             funcionariosEmpresa.setSalario(sc.nextDouble());
