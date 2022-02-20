@@ -10,6 +10,7 @@ public class Game {
     private ArrayList<Question> questionSet;
 
     public Game() {
+        //Lista de questões declaradas para o Quizz
         questionSet = new ArrayList<Question>();
         String q = "Quem descobriu o Brasil?";
         String[] a = {"Pedro Alvares Cabral", "Ronaldinho Gaucho", "Barack Obama", "Sheila Mello"};
@@ -18,7 +19,7 @@ public class Game {
         a = new String[]{"Amarelo", "Azul", "Roxo", "Branca"};
         questionSet.add(new Question(q, a, "Roxo"));
         q = "Qual a capital do Brasil?";
-        a = new String[]{"São Paulo", "Brasília", "Rio de Janeiro", "Salvaddor"};
+        a = new String[]{"São Paulo", "Brasília", "Rio de Janeiro", "Salvador"};
         questionSet.add(new Question(q, a, "Brasília"));
         q = "Quantos lados tem um quadrado?";
         a = new String[]{"Um", "Dois", "Três", "Quatro"};
@@ -30,7 +31,7 @@ public class Game {
         Scanner scan = new Scanner(System.in);
         int numCorrect = 0;
         int numError = 0;
-        //mostrar as questoes
+        //Listagem de questões na tela do usuário e comparação das respostas com a resposta correta
         for (int question = 0; question < questionSet.size(); question++) {
             System.out.println(questionSet.get(question).getQuestion());
             int numChoices = questionSet.get(question).getChoices().size();
@@ -52,6 +53,7 @@ public class Game {
             }
         }
         scan.close();
+        //Mensagem final, mostrando o número de acertos e erros do Quizz
         System.out.println("Voce acertou " + numCorrect + " questõe(s) e errou " + numError + " questõe(s)");
 
     }

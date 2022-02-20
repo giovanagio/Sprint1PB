@@ -9,6 +9,8 @@ public class Question {
         private String question;
         private ArrayList<String> choices;
         private String answer;
+
+        //Criação das questões com perguntas, alternativas e resposta
         public Question(String question, String[] choices, String answer){
             this.question = question;
             this.choices = new ArrayList<String>();

@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Driver {
     public static void main(String[] args) {
+        //Layout do jogo Quizz e sua chamada para o usuário
         Scanner sc = new Scanner(System.in);
         Question usuario = new Question();
         System.out.println("----------------------------");
