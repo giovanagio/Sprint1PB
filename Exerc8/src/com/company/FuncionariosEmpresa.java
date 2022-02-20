@@ -1,12 +1,14 @@
 package com.company;
 
 public class FuncionariosEmpresa {
+    //Declaração de variaveis para o programa
     private String name;
     private double salario;
     private double bonificacao;
     private double salarioLiquido;
     private double desconto = 0;
 
+    //Realizando o cálculo de bonificação
     public void calculaBonusFuncionario(double salario){
 
         if (salario <= 1000) {

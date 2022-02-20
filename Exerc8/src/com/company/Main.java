@@ -7,14 +7,14 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-
+        //Declaracao da lista de funcionarios para o programa
 	    Scanner sc = new Scanner(System.in);
         List<FuncionariosEmpresa> funcionarios = new ArrayList<>();
 
         System.out.println("Digite a quantidade de funcionários para avaliar:");
         int numFuncionarios = sc.nextInt();
 
-
+        //Cadastrando os funcionários, de acordo com o número da quantidade informado
         for (int i = 0; i < numFuncionarios; i++) {
 
             FuncionariosEmpresa funcionariosEmpresa = new FuncionariosEmpresa();
@@ -26,12 +26,13 @@ public class Main {
             funcionarios.add(funcionariosEmpresa);
 
         }
-
+        //Realizando comparação final e demostrando os resultados
+        //dos funcionários, salários e seus respectivos descontos/bonus
         for (int i = 0; i < funcionarios.size(); i++) {
 
             System.out.println("Funcionário: " + funcionarios.get(i).getName());
             System.out.println("Salário: " + funcionarios.get(i).getSalario());
-            if(funcionarios.get(i).getSalario() > 200){
+            if(funcionarios.get(i).getSalario() > 2000){
                 System.out.println("Desconto: " + funcionarios.get(i).getDesconto());
             }
             else {
